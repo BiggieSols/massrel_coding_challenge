@@ -28,6 +28,7 @@ massrel.BandView = Backbone.View.extend({
 
   _animateCount: function(oldCount, newCount) {
     var start, end, _this;
+    
     start = oldCount;
     end   = newCount;
     _this = this;
@@ -42,9 +43,11 @@ massrel.BandView = Backbone.View.extend({
   },
 
   _commaSeparateNumber: function(val) {
-    var valArr = val.toString().split("");
-    var len = valArr.length;
-    for(var i = 3; i < len; i += 3) {
+    var valArr, len, i;
+
+    valArr = val.toString().split("");
+    len = valArr.length;
+    for(i = 3; i < len; i += 3) {
       valArr.splice(len - i, 0, ",");
     }
     return valArr.join("");
