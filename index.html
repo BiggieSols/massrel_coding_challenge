@@ -15,12 +15,62 @@
 
   </head>
   <body>
+    <div class="awesome-bands-logo">
+      <h1>Awesome Bands</h1>
+    </div>
+
+    <div class="bands-container">
+    </div>
 
 
 
     <!-- JS -->
+
+    <!-- provided by massrel -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="./js/lib.js"></script>
+
+    <!-- backbone and underscore libraries -->
+    <script src="./js/underscore-min.js"></script>
+    <script src="./js/backbone-min.js"></script>
+
+    <!-- backbone template -->
+    <script type = "text/template" id="band-template">
+      <div class="band">
+        <span class="name">
+          <%= this.model.escape("name") %>
+        </span>  
+        <span class="count">
+          <%= csvNum %>
+        </span>
+        <span class="mentions-word">
+          Mentions
+        </body>
+      </div>
+    </script>
+
+    <script type = "text/template" id="bands-template">
+      <div class="bands">
+      </div>
+    </script>
+
+    <script type = "text/template" id="bands-divider">
+      <div class="divider">
+      </div>
+    </script>
+
+
+    <!-- backbone models and collections -->
+    <script src="./js/band.js"></script>
+    <script src="./js/bands.js"></script>
+
+
+    <!-- backbone views -->
+    <script src="./js/band_view.js"></script>
+    <script src="./js/bands_view.js"></script>
+
+
+    <!-- primary js file -->
     <script src="./js/script.js"></script>
 
   </body>
